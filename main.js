@@ -1,8 +1,8 @@
 import * as THREE from 'three';
-import vertexShader from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/vertex.glsl';
-import fragmentShader from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/fragment.glsl';
-import atmosphereVertexShaders from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/atmosphereVertexShader.glsl';
-import atmosphereFragmentShaders from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/atmosphereFragment.glsl';
+import vertexShader from './assets/shaders/vertex.glsl';
+import fragmentShader from './assets/shaders/fragment.glsl';
+import atmosphereVertexShaders from './assets/shaders/atmosphereVertex.glsl';
+import atmosphereFragmentShaders from './assets/shaders/atmosphereFragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // get the canvas element
@@ -16,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(75, canvasContainer.offsetWidth / can
 camera.position.z = 5;
 
 // create a texture
-const earthMapTexture = new THREE.TextureLoader().load('./public/images/earthUVMap.jpg');
+const earthMapTexture = new THREE.TextureLoader().load('./assets/images/earthUVMap.jpg');
 
 // create a sphere
 const sphere = new THREE.IcosahedronGeometry(2, 100);
