@@ -1,8 +1,8 @@
 import * as THREE from 'three';
-import vertexShader from './shaders/vertex.glsl';
-import fragmentShader from './shaders/fragment.glsl';
-import atmosphereVertexShaders from './shaders/atmosphereVertex.glsl';
-import atmosphereFragmentShaders from './shaders/atmospherefragment.glsl';
+import vertexShader from './public/shaders/vertex.glsl';
+import fragmentShader from './public/shaders/fragment.glsl';
+import atmosphereVertexShaders from './public/shaders/atmosphereVertex.glsl';
+import atmosphereFragmentShaders from './public/shaders/atmospherefragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // get the canvas element
