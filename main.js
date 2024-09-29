@@ -4,7 +4,7 @@ import fragmentShader from './assets/shaders/fragment.glsl';
 import atmosphereVertexShaders from './assets/shaders/atmosphereVertex.glsl';
 import atmosphereFragmentShaders from './assets/shaders/atmosphereFragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import myImage from './images/earthUVMap.jpg';
+import myImage from './earthUVMap.jpg';
 
 // get the canvas element
 const canvas = document.querySelector('#draw');
