@@ -1,8 +1,8 @@
 import * as THREE from 'three';
-import vertexShader from './public/shaders/vertex.glsl';
-import fragmentShader from './public/shaders/fragment.glsl';
-import atmosphereVertexShaders from './public/shaders/atmosphereVertex.glsl';
-import atmosphereFragmentShaders from './public/shaders/atmospherefragment.glsl';
+import vertexShader from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/vertex.glsl';
+import fragmentShader from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/fragment.glsl';
+import atmosphereVertexShaders from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/atmosphereVertexShader.glsl';
+import atmosphereFragmentShaders from 'C:/Users/admin/OneDrive/Desktop/Three D Globe/public/shaders/atmosphereFragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 // get the canvas element
@@ -11,7 +11,7 @@ const canvasContainer = document.querySelector('.canvas');
 // create a scene
 const scene = new THREE.Scene();
 // create a camera
-const camera = new THREE.PerspectiveCamera(75, canvasContainer.offsetWidth/ canvasContainer.offsetHeight, 1, 10000);
+const camera = new THREE.PerspectiveCamera(75, canvasContainer.offsetWidth / canvasContainer.offsetHeight, 1, 10000);
 // setting camera position (in z - axis)
 camera.position.z = 5;
 
@@ -36,8 +36,8 @@ const sphereMesh = new THREE.Mesh(sphere, sphereVertexShader);
 // create a atmosphere
 const atmosphere = new THREE.IcosahedronGeometry(2.2, 100);
 const atmosphereVertexShader = new THREE.ShaderMaterial({
-  vertexShader : atmosphereVertexShaders,
-  fragmentShader : atmosphereFragmentShaders,
+  vertexShader: atmosphereVertexShaders,
+  fragmentShader: atmosphereFragmentShaders,
   blending: THREE.AdditiveBlending,
   side: THREE.BackSide,
 });
@@ -50,7 +50,7 @@ scene.add(sphereMesh);
 scene.add(atmosphereMesh);
 
 // create a renderer
-const renderer = new THREE.WebGLRenderer({canvas, antialias: true});
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(canvasContainer.offsetWidth, canvasContainer.offsetHeight);
 
@@ -85,7 +85,7 @@ const starVertices = [];
 const stars = new THREE.Points(starGeometry, starMaterial);
 scene.add(stars);
 
-for(let i = 0; i <  4000; i++){
+for (let i = 0; i < 4000; i++) {
   const x = (Math.random() - 0.5) * 500;
   const y = (Math.random() - 0.5) * 500;
   const z = (Math.random() - 0.5) * 500;
@@ -94,5 +94,5 @@ for(let i = 0; i <  4000; i++){
 
 starGeometry.setAttribute(
   'position',
-  new THREE.Float32BufferAttribute(starVertices, 3 )
+  new THREE.Float32BufferAttribute(starVertices, 3)
 );
