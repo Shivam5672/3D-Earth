@@ -16,7 +16,7 @@ const camera = new THREE.PerspectiveCamera(75, canvasContainer.offsetWidth / can
 camera.position.z = 5;
 
 // create a texture
-const earthMapTexture = new THREE.TextureLoader().load('./assets/images/earthUVMap.jpg');
+const earthMapTexture = new THREE.TextureLoader().load('./images/earthUVMap.jpg');
 
 // create a sphere
 const sphere = new THREE.IcosahedronGeometry(2, 100);
