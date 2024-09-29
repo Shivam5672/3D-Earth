@@ -4,6 +4,7 @@ import fragmentShader from './assets/shaders/fragment.glsl';
 import atmosphereVertexShaders from './assets/shaders/atmosphereVertex.glsl';
 import atmosphereFragmentShaders from './assets/shaders/atmosphereFragment.glsl';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import myImage from './images/earthUVMap.jpg';
 
 // get the canvas element
 const canvas = document.querySelector('#draw');
@@ -16,7 +17,7 @@ const camera = new THREE.PerspectiveCamera(75, canvasContainer.offsetWidth / can
 camera.position.z = 5;
 
 // create a texture
-const earthMapTexture = new THREE.TextureLoader().load('./images/earthUVMap.jpg');
+const earthMapTexture = new THREE.TextureLoader().load(myImage);
 
 // create a sphere
 const sphere = new THREE.IcosahedronGeometry(2, 100);
